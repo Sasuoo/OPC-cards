@@ -1,0 +1,14 @@
+
+  "name": "opc-card",
+  "version": "1.0.0",
+  "description": "متجر رقمي لشراء البطاقات مع شحن رصيد تلقائي وآمن للمستخدمين عبر رسالة تأكيد",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1"
+  }
+}
