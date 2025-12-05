@@ -26,14 +26,10 @@ app.post('/api/topup/request', async (req, res) => {
     createdAt: new Date()
   });
 
-  return res.json({
-    ok: true,
-    pendingId: pending._id,
-    instructions: {
-      to: '0925717434',
-      note: 'أرسل الرصيد من رقمك إلى 0925717434. سيتم التحقق تلقائياً عند وصول رسالة التأكيد من Libyana.'
-    }
-  });
+  return res.json({ ok: true, pendingId: pending._id, instructions: {
+    to: '0925717434',
+    note: 'أرسل الرصيد من رقمك إلى 0925717434. سيتم التحقق تلقائياً عند وصول رسالة التأكيد من Libyana.'
+  }});
 });
 
 app.post('/webhook/sms', async (req, res) => {
