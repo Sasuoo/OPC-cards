@@ -1,83 +1,41 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    background: #0b0f19;
-    color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0A1F44;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
-
 header {
-    background: #0d1a33;
-    padding: 20px;
-    text-align: center;
-    font-size: 28px;
-    font-weight: 700;
-    color: #3a8cff;
-    border-bottom: 2px solid #0f2247;
+  background-color: #09203f;
+  padding: 20px;
+  text-align: center;
 }
-
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #0f1624;
-    border-radius: 14px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+h1, h2 {
+  color: #1E90FF;
 }
-
-h2 {
-    color: #3a8cff;
-    margin-bottom: 15px;
-    font-size: 22px;
+main {
+  padding: 20px;
 }
-
-input, select {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0 18px 0;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    background: #0d1a33;
-    color: #fff;
-    font-size: 16px;
+input, textarea, button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
 }
-
 button {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 10px;
-    background: #3a8cff;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+  background-color: #1E90FF;
+  color: #fff;
+  cursor: pointer;
 }
-
 button:hover {
-    background: #1e6fe6;
+  background-color: #187bcd;
 }
-
-.card-box {
-    background: #0d1a33;
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+section {
+  margin-bottom: 30px;
 }
-
-.card-box p {
-    margin: 8px 0;
-    color: #c7d6ff;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 35px;
-    color: #3a8cff;
-    font-size: 14px;
-    opacity: 0.7;
+pre {
+  background-color: #09203f;
+  padding: 10px;
+  border-radius: 5px;
 }
