@@ -7,31 +7,40 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header">
-  <h1 class="site-title">OPC Cards</h1>
-  <button id="toggleMode" class="toggle-btn">تبديل الوضع</button>
-</header>
+<div id="loginPage" class="page active">
+  <h1>تسجيل الدخول</h1>
+  <form id="loginForm">
+    <input type="text" id="username" placeholder="اسم المستخدم" required>
+    <input type="password" id="password" placeholder="كلمة المرور" required>
+    <button type="submit">دخول</button>
+  </form>
+</div>
 
-<main class="main-container">
-  <section id="topup" class="card">
-    <h2>شحن المحفظة</h2>
-    <form id="topupForm" class="form">
-      <input type="text" id="phone" placeholder="رقم الهاتف" required>
-      <input type="number" id="amount" placeholder="المبلغ" required>
-      <button type="submit">اشحن</button>
-    </form>
-    <div id="response" class="response"></div>
-  </section>
+<div id="storePage" class="page">
+  <h1>المتجر</h1>
+  <div id="balance">الرصيد: 0</div>
+  <div id="categoriesContainer"></div>
+  <div id="productsContainer"></div>
+  <button id="logoutBtn">تسجيل الخروج</button>
+</div>
 
-  <section id="products" class="card">
-    <h2>المنتجات</h2>
-    <div id="productList" class="product-list"></div>
-  </section>
-</main>
-
-<footer class="footer">
-  <p>&copy; 2025 OPC Cards</p>
-</footer>
+<div id="adminPage" class="page">
+  <h1>لوحة الإدارة</h1>
+  <form id="categoryForm">
+    <input type="text" id="categoryName" placeholder="اسم الفئة" required>
+    <button type="submit">إضافة فئة</button>
+  </form>
+  <form id="productForm">
+    <input type="text" id="name" placeholder="اسم المنتج" required>
+    <input type="number" id="price" placeholder="السعر" required>
+    <input type="number" id="stock" placeholder="الكمية" required>
+    <select id="categorySelect"></select>
+    <textarea id="desc" placeholder="الوصف"></textarea>
+    <button type="submit">إضافة منتج</button>
+  </form>
+  <div id="responseAdmin"></div>
+  <button id="backToStore">العودة للمتجر</button>
+</div>
 
 <script src="script.js"></script>
 </body>
