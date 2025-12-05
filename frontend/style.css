@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #0b0f19;
+    color: #fff;
+}
+
+header {
+    background: #0d1a33;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #3a8cff;
+    border-bottom: 2px solid #0f2247;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #0f1624;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+h2 {
+    color: #3a8cff;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px 0;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: #0d1a33;
+    color: #fff;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #3a8cff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1e6fe6;
+}
+
+.card-box {
+    background: #0d1a33;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.card-box p {
+    margin: 8px 0;
+    color: #c7d6ff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+    color: #3a8cff;
+    font-size: 14px;
+    opacity: 0.7;
+}
