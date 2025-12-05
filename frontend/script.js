@@ -1,8 +1,3 @@
-const toggle = document.getElementById('toggleMode');
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('light');
-});
-
 const topupForm = document.getElementById('topupForm');
 if (topupForm) {
   topupForm.addEventListener('submit', async e => {
@@ -24,6 +19,7 @@ if (productForm) {
   productForm.addEventListener('submit', async e => {
     e.preventDefault();
     const name = document.getElementById('name').value;
+    const category = document.getElementById('category').value;
     const price = document.getElementById('price').value;
     const stock = document.getElementById('stock').value;
     const description = document.getElementById('desc').value;
@@ -31,26 +27,9 @@ if (productForm) {
     const res = await fetch('/api/products/add', {
       method: 'POST',
       headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({name, price, stock, description})
+      body: JSON.stringify({name, category, price, stock, description})
     });
     const data = await res.json();
     document.getElementById('response').innerText = JSON.stringify(data);
   });
 }
-
-async function fetchProducts() {
-  const listContainer = document.getElementById('adminProductList') || document.getElementById('productList');
-  if (!listContainer) return;
-  const res = await fetch('/api/products');
-  const products = await res.json();
-  listContainer.innerHTML = products.map(p => `
-    <div class="product-item">
-      <h3>${p.name}</h3>
-      <p>السعر: ${p.price}</p>
-      <p>الكمية المتاحة: ${p.stock}</p>
-      <p>${p.description || ''}</p>
-    </div>
-  `).join('');
-}
-
-fetchProducts();
