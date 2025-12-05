@@ -3,9 +3,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('./db');
 const moment = require('moment');
 
-const User = require('./models/user');
-const PendingTopup = require('./models/pendingTopup');
-const Product = require('./models/product');
+const User = require('./models/User');
+const PendingTopup = require('./models/PendingTopup');
+const Product = require('./models/Product');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -26,10 +26,14 @@ app.post('/api/topup/request', async (req, res) => {
     createdAt: new Date()
   });
 
-  return res.json({ ok: true, pendingId: pending._id, instructions: {
-    to: '0925717434',
-    note: 'أرسل الرصيد من رقمك إلى 0925717434. سيتم التحقق تلقائياً عند وصول رسالة التأكيد من Libyana.'
-  }});
+  return res.json({
+    ok: true,
+    pendingId: pending._id,
+    instructions: {
+      to: '0925717434',
+      note: 'أرسل الرصيد من رقمك إلى 0925717434. سيتم التحقق تلقائياً عند وصول رسالة التأكيد من Libyana.'
+    }
+  });
 });
 
 app.post('/webhook/sms', async (req, res) => {
