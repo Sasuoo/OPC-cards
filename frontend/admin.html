@@ -3,18 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPC Cards - Admin</title>
 <link rel="stylesheet" href="style.css">
-<title>Admin OPC Cards</title>
 </head>
 <body>
-<form id="productForm">
-  <input type="text" id="name" placeholder="اسم المنتج">
-  <input type="number" id="price" placeholder="السعر">
-  <input type="number" id="stock" placeholder="الكمية">
-  <textarea id="desc" placeholder="الوصف"></textarea>
-  <button type="submit">أضف المنتج</button>
-</form>
-<div id="response"></div>
+<header class="header">
+  <h1 class="site-title">لوحة الإدارة - OPC Cards</h1>
+  <button id="toggleMode" class="toggle-btn">تبديل الوضع</button>
+</header>
+
+<main class="main-container">
+  <section id="addProduct" class="card">
+    <h2>إضافة منتج جديد</h2>
+    <form id="productForm" class="form">
+      <input type="text" id="name" placeholder="اسم المنتج" required>
+      <input type="number" id="price" placeholder="السعر" required>
+      <input type="number" id="stock" placeholder="الكمية المتاحة" required>
+      <textarea id="desc" placeholder="وصف المنتج" rows="3"></textarea>
+      <button type="submit">إضافة المنتج</button>
+    </form>
+    <div id="response" class="response"></div>
+  </section>
+
+  <section id="productListAdmin" class="card">
+    <h2>قائمة المنتجات الحالية</h2>
+    <div id="adminProductList" class="product-list"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 OPC Cards</p>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
