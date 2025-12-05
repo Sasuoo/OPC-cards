@@ -7,41 +7,34 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="loginPage" class="page active">
-  <h1>تسجيل الدخول</h1>
-  <form id="loginForm">
-    <input type="text" id="username" placeholder="اسم المستخدم" required>
-    <input type="password" id="password" placeholder="كلمة المرور" required>
-    <button type="submit">دخول</button>
-  </form>
+<div class="container">
+  <div id="auth">
+    <h1>تسجيل الدخول / التسجيل</h1>
+    <input type="email" id="email" placeholder="البريد الإلكتروني">
+    <input type="password" id="password" placeholder="كلمة المرور">
+    <button id="registerBtn">تسجيل</button>
+    <button id="loginBtn">تسجيل الدخول</button>
+    <p id="authMessage"></p>
+  </div>
+  <div id="otpSection" class="hidden">
+    <h2>ادخل رمز التحقق</h2>
+    <input type="text" id="otpInput" placeholder="الرمز">
+    <button id="verifyBtn">تحقق</button>
+    <p id="otpMessage"></p>
+  </div>
+  <div id="shopSection" class="hidden">
+    <h1>المتجر</h1>
+    <p>رصيدك: <span id="balance">0</span></p>
+    <div id="products"></div>
+    <div id="topupFormContainer" class="hidden">
+      <h2>شحن المنتج</h2>
+      <input type="text" id="phone" placeholder="رقم الهاتف">
+      <input type="number" id="amount" placeholder="القيمة">
+      <button id="topupBtn">طلب شحن</button>
+      <p id="topupMessage"></p>
+    </div>
+  </div>
 </div>
-
-<div id="storePage" class="page">
-  <h1>المتجر</h1>
-  <div id="balance">الرصيد: 0</div>
-  <div id="categoriesContainer"></div>
-  <div id="productsContainer"></div>
-  <button id="logoutBtn">تسجيل الخروج</button>
-</div>
-
-<div id="adminPage" class="page">
-  <h1>لوحة الإدارة</h1>
-  <form id="categoryForm">
-    <input type="text" id="categoryName" placeholder="اسم الفئة" required>
-    <button type="submit">إضافة فئة</button>
-  </form>
-  <form id="productForm">
-    <input type="text" id="name" placeholder="اسم المنتج" required>
-    <input type="number" id="price" placeholder="السعر" required>
-    <input type="number" id="stock" placeholder="الكمية" required>
-    <select id="categorySelect"></select>
-    <textarea id="desc" placeholder="الوصف"></textarea>
-    <button type="submit">إضافة منتج</button>
-  </form>
-  <div id="responseAdmin"></div>
-  <button id="backToStore">العودة للمتجر</button>
-</div>
-
 <script src="script.js"></script>
 </body>
 </html>
