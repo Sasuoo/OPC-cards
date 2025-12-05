@@ -3,17 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
 <title>OPC Cards</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button id="toggleMode">تغيير الوضع</button>
-<form id="topupForm">
-  <input type="text" id="phone" placeholder="رقمك">
-  <input type="number" id="amount" placeholder="المبلغ">
-  <button type="submit">اشحن</button>
-</form>
-<div id="response"></div>
+<header class="header">
+  <h1 class="site-title">OPC Cards</h1>
+  <button id="toggleMode" class="toggle-btn">تبديل الوضع</button>
+</header>
+
+<main class="main-container">
+  <section id="topup" class="card">
+    <h2>شحن المحفظة</h2>
+    <form id="topupForm" class="form">
+      <input type="text" id="phone" placeholder="رقم الهاتف" required>
+      <input type="number" id="amount" placeholder="المبلغ" required>
+      <button type="submit">اشحن</button>
+    </form>
+    <div id="response" class="response"></div>
+  </section>
+
+  <section id="products" class="card">
+    <h2>المنتجات</h2>
+    <div id="productList" class="product-list"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 OPC Cards</p>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
